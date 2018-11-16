@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:paddingVertical="4dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="2dp"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="18dp"
+        android:id="@+id/questiontextview"/>
+    <LinearLayout
+        android:paddingHorizontal="8dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:textColor="@color/textcolor"
+            android:textColorHint="@color/hintcolor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:editable="true"
+            android:textSize="16dp"
+            android:hint="Reply"
+            android:id="@+id/answeredittext"/>
+        <Button
+            android:layout_weight="2"
+            android:id="@+id/sendbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+
+    </View>
+    <LinearLayout
+        android:id="@+id/expandlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/textcolor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="expand.."
+            android:padding="8dp"
+            android:gravity="right"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingHorizontal="8dp"
+            android:orientation="vertical"
+            android:id="@+id/answerslist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
