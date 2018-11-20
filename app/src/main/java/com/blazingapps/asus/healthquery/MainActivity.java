@@ -129,11 +129,16 @@ public class MainActivity extends AppCompatActivity {
                         for (DataSnapshot answer : answersnapshot.getChildren()){
                             answerlist.add(new AnswerObj(answer.child("reply").getValue().toString(),answer.child("docId").getValue().toString()));
                         }
+                        Log.d("TAG",questionsnapshot.getKey());
+                        String usrkey=""+usersnapshot.getKey();
+                        String qstnkey=""+questionsnapshot.getKey();
+                        String qstn=""+questionsnapshot.child("question").getValue().toString();
+                        String time=""+questionsnapshot.child("time").getValue().toString();
                         questionObjects.add(new QuestionObject(
-                                usersnapshot.getKey(),
-                                questionsnapshot.getKey(),
-                                questionsnapshot.child("question").getValue().toString(),
-                                Double.valueOf(questionsnapshot.child("time").getValue().toString()),
+                                usrkey,
+                                qstnkey,
+                                qstn,
+                                Double.valueOf(time),
                                 answerlist));
                     }
                 }
